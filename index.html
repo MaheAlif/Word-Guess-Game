@@ -28,13 +28,23 @@
       class="flex flex-col items-center justify-center border-green-300 p-5 gap-y-10"
     >
       <!-- Home -->
-      <section class="home" id="home">
+      <section class="home border-green-400 min-w-[1200px]" id="home">
         <div
           class=" border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
         >
-          <h1 class="text-8xl text-white font-extrabold uppercase">
+          <!-- <h1 class="text-8xl text-white font-extrabold uppercase">
             Alphabet clash!
-          </h1>
+          </h1> -->
+
+          <div class="diff aspect-[16/6]">
+            <div class="diff-item-1 flex flex-col justify-center">
+              <div class="bg-primary text-primary-content text-9xl font-black flex place-content-center text-center flex-col justify-center">Alphabet clash!</div>
+            </div>
+            <div class="diff-item-2 flex">
+              <div class="bg-base-200 text-9xl font-black flex place-content-center text-center flex-col justify-center">Alphabet clash!</div>
+            </div>
+            <div class="diff-resizer"></div>
+          </div>
 
           <p class="text-2xl text-white">
             Unleash your keyboard Kung-Fu. Press "Enter" to play!
@@ -148,6 +158,8 @@
               <p class="text-white font-normal text-xl">
                 Practice will make you Pro!
               </p>
+              <button onclick="takeHome()" class="btn text-2xl bg-white hover:text-orange-400"><a href="#home">Home</a>
+              </button>
             </div>
           </div>
         </div>

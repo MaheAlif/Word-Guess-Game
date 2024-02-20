@@ -4,15 +4,16 @@ function handleKeyUp(event) {
   //    Catching the key pressed in the keyboard!
   let keyPressed = event.key;
 
-  if(keyPressed === "Escape") {
+  if (keyPressed === "Escape") {
     console.log("Game over!");
-    
+
     let playGround = document.getElementById("playGround");
     playGround.classList.add("hidden");
-    let scoreSection = document.getElementById('score');
+    let scoreSection = document.getElementById("score");
     scoreSection.classList.remove("hidden");
-    
-    let showScore = document.getElementById('showScore').innerHTML = "Score : <span>"+ point + "</span>";
+
+    let showScore = (document.getElementById("showScore").innerHTML =
+      "Score : <span>" + point + "</span>");
   }
   //   let keyBoardLayout = document.getElementsByClassName('kbd');
   //   console.log(keyBoardLayout);
@@ -21,11 +22,11 @@ function handleKeyUp(event) {
 
   // Save the original styles of the button
   const originalBackgroundColor = document.getElementById(keyPressed).style.backgroundColor;
-  if(originalBackgroundColor === null) {
+  if (originalBackgroundColor === null) {
     originalBackgroundColor = "white";
   }
   const originalColor = document.getElementById(keyPressed).style.color;
-  if(originalColor === null) {
+  if (originalColor === null) {
     originalColor = "black";
   }
 
@@ -35,9 +36,10 @@ function handleKeyUp(event) {
 
   // Revert the button's styles after a delay
   setTimeout(() => {
-    document.getElementById(keyPressed).style.backgroundColor = originalBackgroundColor;
+    document.getElementById(keyPressed).style.backgroundColor =
+      originalBackgroundColor;
     document.getElementById(keyPressed).style.color = originalColor;
-  }, 800); 
+  }, 800);
 
   //   Catching the key shown int he window
   let winKey = document.getElementById("artboard").innerText.toLowerCase();
@@ -96,4 +98,12 @@ function playAgain() {
   document.getElementById("scoreBtn").innerHTML =
     "Score <span>" + point + "</span>";
   play();
+}
+function takeHome() {
+  let home = document.getElementById("home");
+
+  home.classList.remove("hidden");
+  let scoreSection = document.getElementById("score");
+  scoreSection.classList.add("hidden");
+  console.log(home.classList, scoreSection.classList);
 }
