@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body
-    class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center p-10"
+    class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center"
   >
     <main
-      class="flex flex-col items-center justify-center border-green-300 p-5 gap-y-10"
+      class="flex flex-col items-center justify-center border-green-300 gap-y-10"
     >
       <!-- Home -->
-      <section class="home border-green-400 min-w-[1200px]" id="home">
+      <section class="home border-green-400 min-w-[320px] lg:min-w-[1200px]" id="home">
         <div
           class=" border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
         >
@@ -36,12 +36,12 @@
             Alphabet clash!
           </h1> -->
 
-          <div class="diff aspect-[16/6]">
+          <div class="diff aspect-[4/2] lg:aspect-[16/5]">
             <div class="diff-item-1 flex flex-col justify-center">
-              <div class="bg-primary text-primary-content text-9xl font-black flex place-content-center text-center flex-col justify-center">Alphabet clash!</div>
+              <div class="bg-gray-200 text-primary-content text-4xl lg:text-9xl text-gray-700 font-black flex place-content-center text-center flex-col justify-center">Alphabet clash!</div>
             </div>
             <div class="diff-item-2 flex">
-              <div class="bg-base-200 text-9xl font-black flex place-content-center text-center flex-col justify-center">Alphabet clash!</div>
+              <div class="bg-orange-400 text-4xl lg:text-9xl font-black text-cyan-300 flex place-content-center text-center flex-col justify-center">Alphabet clash!</div>
             </div>
             <div class="diff-resizer"></div>
           </div>
@@ -61,21 +61,21 @@
       </section>
 
       <!-- Play ground -->
-      <section class="hidden playGround" id="playGround">
+      <section class="hidden playGround sm:min-w-[320px]" id="playGround">
         <div
-          class="border-red-500 p-5 flex flex-col items-center justify-center min-h-screen gap-10"
+          class="border-red-500 lg:p-5 flex flex-col items-center justify-center min-h-screen gap-10 min-w-[320px]"
         >
           <!-- ArtBoard -->
           <div
             id="artboard"
-            class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB3] border-[20px] border-[#010313CC] rounded-2xl text-center text-8xl font-bold text-black flex flex-col justify-center"
+            class="artboard artboard-horizontal phone-1 lg:phone-6 bg-[#FFFFFFB3] border-[5px] lg:border-[20px] border-[#010313CC] rounded-2xl text-center text-4xl lg:text-8xl font-bold text-black flex flex-col justify-center min-w-[300px]"
           >
             Mahe ALif
           </div>
 
           <!-- KeyBoard -->
           <div>
-            <div class="flex justify-center gap-1 my-1 w-full">
+            <div class="flex justify-center gap-1 my-1 min-w-[300px] lg:w-full">
               <kbd id="q" class="kbd">q</kbd>
               <kbd id="w" class="kbd">w</kbd>
               <kbd id="e" class="kbd">e</kbd>
@@ -113,7 +113,7 @@
           <!-- Like & Score -->
           <div
             id="likeScore"
-            class="likeScore flex justify-between border-blue-300 min-w-full p-5"
+            class="likeScore flex flex-col lg:flex-row justify-between border-blue-300 min-w-full p-5"
           >
             <button
               class="btn px-6 text-white font-semibold hover:text-orange-500 bg-purple-500"
